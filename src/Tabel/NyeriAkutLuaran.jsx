@@ -3,7 +3,7 @@
 function NyeriAkutLuaran() {
   return (
     <div>
-      <td className="y-2">
+      <td className="py-2">
         Pasien menunjukkan penurunan (L.08066 - Tingkat Nyeri)
         <br />
         yaitu:

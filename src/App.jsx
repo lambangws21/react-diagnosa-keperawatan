@@ -16,6 +16,10 @@ import RisikoJatuh from "./Tabel/RisikoJatuh";
 import Button from "./components/Button";
 import RisJatuhLuaran from "./Tabel/RisJatuhLuaran";
 import RisJatuhIntervensi from "./Tabel/RisJatuhIntervensi";
+import RisikoInfeksi from "./Tabel/RisikoInfeksi";
+import RisikoInfeksiLuaran from "./Tabel/RisikoInfeksiLuraran";
+import RisikoInfekIntervensi from "./Tabel/RisikoInfekIntervensi";
+
 
 function App() {
   return (
@@ -122,6 +126,21 @@ function App() {
             </td>
             <td className="flex-col items-center border-b-2 border-gray-300 h-72">
               <RisJatuhIntervensi />
+              <Button />
+            </td>
+          </tr>
+          {/* Risiko Infeksi */}
+          <tr>
+            <td className="flex-col items-center border-b-2 border-gray-300 p-2 h-72">
+              <RisikoInfeksi />
+              <Button />
+            </td>
+            <td className="flex-col items-center border-b-2 border-gray-300 h-72">
+              <RisikoInfeksiLuaran />
+              <Button />
+            </td>
+            <td className="flex-col items-center border-b-2 border-gray-300 h-72">
+          <RisikoInfekIntervensi/>
               <Button />
             </td>
           </tr>
