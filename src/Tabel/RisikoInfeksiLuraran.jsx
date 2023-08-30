@@ -1,7 +1,16 @@
+/** @format */
+
+import CopyToClipboardButton from "../components/CopyToClipboardButton";
+
 function RisikoInfeksiLuaran() {
+  const textToCopy = ` L.14134 - Termoregulasi yaitu:
+  - Pasien tak tampak mengigil
+  - Suhu tubuh pasien dalam batas normal (36)
+  - Keluhan dingin pasien teratasi`;
   return (
     <div>
-      <td className="y-2">
+      <td className="py-2">
+        <p className="sr-only">{textToCopy}</p>
         Pasien menunjukkan penurunan (Tingkat Infeksi)
         <br />
         yaitu:
@@ -13,6 +22,7 @@ function RisikoInfeksiLuaran() {
           <li>Kadar sel darah putih pasien membaik</li>
         </ul>
       </td>
+      <CopyToClipboardButton text={textToCopy} />
     </div>
   );
 }
