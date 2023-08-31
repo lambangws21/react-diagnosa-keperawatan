@@ -17,6 +17,7 @@ import RisJatuhIntervensi from "./Tabel/RisJatuhIntervensi";
 import RisikoInfeksi from "./Tabel/RisikoInfeksi";
 import RisikoInfeksiLuaran from "./Tabel/RisikoInfeksiLuraran";
 import RisikoInfekIntervensi from "./Tabel/RisikoInfekIntervensi";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -130,6 +131,9 @@ function App() {
           </tbody>
         </table>
       </div>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 }
