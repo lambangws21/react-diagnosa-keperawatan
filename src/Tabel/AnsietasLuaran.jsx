@@ -6,7 +6,7 @@ export default function AnsietasLuaran() {
   -Perilaku tegas pasien menurun`;
   return (
     <div>
-      <td className=" p-2">
+      <td className=" py-2">
         <p className="sr-only"> {textToCopy} </p>
         Pasien menunjukkan penurunan tingkat (L.09093-Tingkat Ansietas) yaitu:
         <ul className="leading-normal list-decimal list-inside">

@@ -18,6 +18,12 @@ import RisikoInfeksi from "./Tabel/RisikoInfeksi";
 import RisikoInfeksiLuaran from "./Tabel/RisikoInfeksiLuraran";
 import RisikoInfekIntervensi from "./Tabel/RisikoInfekIntervensi";
 import Footer from "./components/Footer";
+import GangguanIntegritasJaringan from "./Tabel/GangguanIntegritasJaringan";
+import GangguanIntegritasLuaran from "./Tabel/GangguanIntegritasLuaran";
+import GangguanIntegritasIntervensi from "./Tabel/GangguanIntegritasIntervensi";
+import KebersihanJalanNafas from "./Tabel/KebersihanJalanNafas";
+import KebersihanJalanNafasLuaran from "./Tabel/KebersihanJalanNafasLuaran"
+import KebersihanJalanNafasIntervensi from "./Tabel/GangguanIntegritasIntervensi"
 
 function App() {
   return (
@@ -31,8 +37,7 @@ function App() {
           border
           bg-sky-100 
           p-1 shadow-md 
-          leading-10"
-              >
+          leading-10">
                 Diagnosa Keperawatan
               </th>
               <th
@@ -40,8 +45,7 @@ function App() {
           border
           bg-sky-100 
           p-1 shadow-md 
-          leading-10"
-              >
+          leading-10">
                 Luaran Keperawatan
               </th>
               <th
@@ -49,8 +53,7 @@ function App() {
           border
           bg-sky-100 
           p-1 shadow-md 
-          leading-10"
-              >
+          leading-10">
                 Intervensi Keperawatan
               </th>
             </tr>
@@ -126,6 +129,30 @@ function App() {
               </td>
               <td className="flex-col items-center border-b-2 border-gray-300 h-72">
                 <RisikoInfekIntervensi />
+              </td>
+            </tr>
+            {/* Gangguan Integritas Kulit */}
+            <tr>
+              <td className="flex-col items-center border-b-2 border-gray-300 p-2 h-72">
+                <GangguanIntegritasJaringan/>
+              </td>
+              <td className="flex-col items-center border-b-2 border-gray-300 h-72">
+                <GangguanIntegritasLuaran />
+              </td>
+              <td className="flex-col items-center border-b-2 border-gray-300 h-72">
+                <GangguanIntegritasIntervensi />
+              </td>
+            </tr>
+            {/* Risiko Jalan Nafas */}
+            <tr>
+              <td className="flex-col items-center border-b-2 border-gray-300 p-2 h-72">
+                <KebersihanJalanNafas/>
+              </td>
+              <td className="flex-col items-center border-b-2 border-gray-300 h-72">
+                <KebersihanJalanNafasLuaran />
+              </td>
+              <td className="flex-col items-center border-b-2 border-gray-300 h-72">
+               <KebersihanJalanNafasIntervensi/>
               </td>
             </tr>
           </tbody>
