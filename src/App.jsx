@@ -25,6 +25,7 @@ import KebersihanJalanNafas from "./Tabel/KebersihanJalanNafas";
 import KebersihanJalanNafasLuaran from "./Tabel/KebersihanJalanNafasLuaran";
 import KebersihanJalanNafasIntervensi from "./Tabel/GangguanIntegritasIntervensi";
 import SideBar from "./components/SideBar";
+import { Router } from "react-router-dom";
 
 function App() {
   return (
