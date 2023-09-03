@@ -22,12 +22,14 @@ import GangguanIntegritasJaringan from "./Tabel/GangguanIntegritasJaringan";
 import GangguanIntegritasLuaran from "./Tabel/GangguanIntegritasLuaran";
 import GangguanIntegritasIntervensi from "./Tabel/GangguanIntegritasIntervensi";
 import KebersihanJalanNafas from "./Tabel/KebersihanJalanNafas";
-import KebersihanJalanNafasLuaran from "./Tabel/KebersihanJalanNafasLuaran"
-import KebersihanJalanNafasIntervensi from "./Tabel/GangguanIntegritasIntervensi"
+import KebersihanJalanNafasLuaran from "./Tabel/KebersihanJalanNafasLuaran";
+import KebersihanJalanNafasIntervensi from "./Tabel/GangguanIntegritasIntervensi";
+import SideBar from "./components/SideBar";
 
 function App() {
   return (
     <>
+      <SideBar />
       <div className="container mx-auto p-10">
         <table className="w-full border-collapse  ">
           <thead>
@@ -37,7 +39,8 @@ function App() {
           border
           bg-sky-100 
           p-1 shadow-md 
-          leading-10">
+          leading-10"
+              >
                 Diagnosa Keperawatan
               </th>
               <th
@@ -45,7 +48,8 @@ function App() {
           border
           bg-sky-100 
           p-1 shadow-md 
-          leading-10">
+          leading-10"
+              >
                 Luaran Keperawatan
               </th>
               <th
@@ -53,7 +57,8 @@ function App() {
           border
           bg-sky-100 
           p-1 shadow-md 
-          leading-10">
+          leading-10"
+              >
                 Intervensi Keperawatan
               </th>
             </tr>
@@ -134,7 +139,7 @@ function App() {
             {/* Gangguan Integritas Kulit */}
             <tr>
               <td className="flex-col items-center border-b-2 border-gray-300 p-2 h-72">
-                <GangguanIntegritasJaringan/>
+                <GangguanIntegritasJaringan />
               </td>
               <td className="flex-col items-center border-b-2 border-gray-300 h-72">
                 <GangguanIntegritasLuaran />
@@ -146,13 +151,13 @@ function App() {
             {/* Risiko Jalan Nafas */}
             <tr>
               <td className="flex-col items-center border-b-2 border-gray-300 p-2 h-72">
-                <KebersihanJalanNafas/>
+                <KebersihanJalanNafas />
               </td>
               <td className="flex-col items-center border-b-2 border-gray-300 h-72">
                 <KebersihanJalanNafasLuaran />
               </td>
               <td className="flex-col items-center border-b-2 border-gray-300 h-72">
-               <KebersihanJalanNafasIntervensi/>
+                <KebersihanJalanNafasIntervensi />
               </td>
             </tr>
           </tbody>
