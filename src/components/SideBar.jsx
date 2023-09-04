@@ -3,10 +3,10 @@ import { useState } from "react";
 function SideBar() {
   const [open, setOpen] = useState(true);
   const Menus = [
-    { title: "Nursing Diagnosis", src: "duplicate" },
-    { title: "Alkes Operasi", src: "list" },
-    { title: "Jadwal Operasi", src: "booking", gap: true },
-    { title: "Chat", src: "chat" },
+    { title: "Nursing Diagnosis", src: "board" },
+    { title: "Alkes Operasi", src: "shop" },
+    { title: "Jadwal Operasi", src: "board", gap: true },
+    { title: "Chat", src: "shop" },
   ];
   return (
     <div className="flex fixed z-50">
@@ -46,7 +46,7 @@ function SideBar() {
               }  ${index === 0 && "bg-blue-800"}`}
             >
               <img
-                src={`./src/img/${menu.src}.png`}
+                src={`./src/img/${menu.src}.svg`}
                 className={`w-10 text-white cursor-pointer mt-3 bg-white rounded-md border-blue-950 shadow-lg p-1 items-center duration-300 ${
                   !open ? "w-10" : "w-12"
                 }`}
