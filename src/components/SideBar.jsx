@@ -1,40 +1,63 @@
 /** @format */
-
-import {
-  ArchiveBoxArrowDownIcon,
-  CalendarIcon,
-  ChatBubbleBottomCenterIcon,
-  Cog6ToothIcon,
-  ShoppingCartIcon,
-} from "@heroicons/react/24/solid";
-
+import { useState } from "react";
 function SideBar() {
+  const [open, setOpen] = useState(true);
+  const Menus = [
+    { title: "Nursing Diagnosis", src: "Bookmark" },
+    { title: "Belanja Alkes Operasi", src: "shoppingIcon" },
+    { title: "Nursing", src: "Bookmark", gap: true },
+    { title: "Belanja", src: "shoppingIcon" },
+  ];
   return (
-    <div className="fixed inset-y-0 left-0 bg-sky-200 md:w-20 h-2/3 mt-20 rounded-2xl ml-3 sm:ml-1 sm:w-10 shadow-md">
-      <h3 className="flex items-center justify-center text-xl h-10 bg-sky-600 rounded-full text-purple-50 font-extrabold">
-        Os
-      </h3>
-      <ul className="flex flex-col text-md flex-1 h-full ">
-        <li className="flex justify-center items-center flex-col py-5 border-gray-500 text-gray-500  hover:text-sky-500 hover:border-sky-500 active:text-sky-500">
-          <ArchiveBoxArrowDownIcon className="w-6 h-6  cursor-pointer active:text-sky-300" />
-          <span className="sm:hidden md:inline"> Diagnosa</span>
-        </li>
-        <li className="flex justify-center items-center flex-col py-5 border-gray-500 text-gray-500 hover:text-sky-500 hover:border-sky-500 active:text-sky-500">
-          <ShoppingCartIcon className="w-6 h-6  cursor-pointer active:bg-sky-300" />
-          <span className="sm:hidden md:inline"> Alkes</span>
-        </li>
-        <li className="flex justify-center items-center flex-col py-5  border-gray-500 text-gray-500  hover:text-sky-500 hover:border-sky-500 active:text-sky-500">
-          <CalendarIcon className="w-6 h-6  cursor-pointer active:bg-sky-300" />
-          <span className="sm:hidden md:inline"> Jadwal</span>
-        </li>
-        <li className="flex justify-center items-center flex-col py-5 border-gray-500 text-gray-500  hover:text-sky-500 hover:border-sky-500 active:text-sky-500">
-          <ChatBubbleBottomCenterIcon className="w-6 h-6   cursor-pointer active:bg-sky-300" />
-          <span className="sm:hidden md:inline">Pesan</span>
-        </li>
-        <li className="flex justify-center items-center flex-col py-5 border-gray-500 text-gray-500 mt-auto mb-16  hover:text-sky-500 hover:border-sky-500 active:text-sky-500">
-          <Cog6ToothIcon className="w-6 h-6  cursor-pointer active:bg-sky-300" />
-        </li>
-      </ul>
+    <div className="flex fixed z-50">
+      <div
+        className={`${
+          open ? "w-72" : "w-20"
+        } duration-300 h-screen p-5 pt-8 bg-blue-950 relative`}
+      >
+        <img
+          src="./src/img/ChevronLeft.png"
+          className={`absolute cursor-pointer -right-3 top-9 w-8 border-2 border-blue-800 rounded-full bg-slate-200 p-1 duration-700 ${
+            !open && "rotate-180"
+          } animate-pulse hover:animate-none `}
+          onClick={() => setOpen(!open)}
+        />
+        <div className="flex gap-x-4 items-center">
+          <img
+            src="./src/img/logo.png"
+            className={` cursor-pointer duration-500 ${
+              open && "rotate-[360deg]"
+            }`}
+          />
+          <h1
+            className={`text-white origin-left font-bold text-xl duration-300 ${
+              !open && "scale-0"
+            }`}
+          >
+            Nursing
+          </h1>
+        </div>
+        <ul className="pt-6 ">
+          {Menus.map((menu, index) => (
+            <li
+              key={index}
+              className={`text-white text-sm flex items-center gap-x-4 cursor-pointer p-4 hover:bg-blue-800 rounded-md ${
+                menu.gap ? "mt-9" : "mt-2"
+              }  ${index === 0 && "bg-blue-800"}`}
+            >
+              <img
+                src={`./src/img/${menu.src}.png`}
+                className={`w-10 text-white cursor-pointer mt-3 bg-white rounded-md border-blue-950 shadow-lg p-1 items-center duration-300 ${
+                  !open ? "w-10" : "w-12"
+                }`}
+              />
+              <span className={`${!open && "hidden"} origin-left duration-200`}>
+                {menu.title}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }

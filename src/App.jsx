@@ -28,9 +28,9 @@ import SideBar from "./components/SideBar";
 
 function App() {
   return (
-    <>
+    <div>
       <SideBar />
-      <div className="container mx-auto p-10">
+      <div className="container mx-auto p-10 bg-slate-50 ml-20">
         <table className="w-full border-collapse  ">
           <thead>
             <tr>
@@ -166,7 +166,7 @@ function App() {
       <footer>
         <Footer />
       </footer>
-    </>
+    </div>
   );
 }
 
