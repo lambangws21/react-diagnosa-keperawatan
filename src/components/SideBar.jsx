@@ -3,7 +3,7 @@ import { useState } from "react";
 function SideBar() {
   const [open, setOpen] = useState(true);
   const Menus = [
-    { title: "Nursing Diagnosis", src: "Bookmark" },
+    { title: "Nursing Diagnosis", src: "duplicate" },
     { title: "Alkes Operasi", src: "list" },
     { title: "Jadwal Operasi", src: "booking", gap: true },
     { title: "Chat", src: "chat" },
