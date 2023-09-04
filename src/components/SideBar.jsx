@@ -4,9 +4,9 @@ function SideBar() {
   const [open, setOpen] = useState(true);
   const Menus = [
     { title: "Nursing Diagnosis", src: "Bookmark" },
-    { title: "Alkes Operasi", src: "recipe-book" },
-    { title: "Jadwal Operasi", src: "calendar", gap: true },
-    { title: "Chat", src: "speech-bubble" },
+    { title: "Alkes Operasi", src: "list" },
+    { title: "Jadwal Operasi", src: "booking", gap: true },
+    { title: "Chat", src: "chat" },
   ];
   return (
     <div className="flex fixed z-50">
