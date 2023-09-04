@@ -1,5 +1,10 @@
 /** @format */
 import { useState } from "react";
+import {
+  BeakerIcon,
+  ChevronLeftIcon,
+  BanknotesIcon,
+} from "@heroicons/react/24/solid";
 function SideBar() {
   const [open, setOpen] = useState(true);
   const Menus = [
@@ -15,17 +20,15 @@ function SideBar() {
           open ? "w-72" : "w-20"
         } duration-300 h-screen p-5 pt-8 bg-blue-950 relative`}
       >
-        <img
-          src="./src/img/ChevronLeft.png"
+        <ChevronLeftIcon
           className={`absolute cursor-pointer -right-3 top-9 w-8 border-2 border-blue-800 rounded-full bg-slate-200 p-1 duration-700 ${
             !open && "rotate-180"
           } animate-pulse hover:animate-none `}
           onClick={() => setOpen(!open)}
         />
         <div className="flex gap-x-4 items-center">
-          <img
-            src="./src/img/logo.png"
-            className={` cursor-pointer duration-500 shadow-sky-400 border-sky-300 rounded-full ${
+          <BeakerIcon
+            className={`w-10 bg-white p-1 cursor-pointer duration-500 shadow-sky-400 border-sky-300 rounded-full ${
               open && "rotate-[360deg]"
             }`}
           />
@@ -45,9 +48,8 @@ function SideBar() {
                 menu.gap ? "mt-9" : "mt-2"
               }  ${index === 0 && "bg-blue-800"}`}
             >
-              <img
-                src={`./src/img/${menu.src}.svg`}
-                className={`w-10 text-white cursor-pointer mt-3 bg-white rounded-md border-blue-950 shadow-lg p-1 items-center duration-300 ${
+              <BanknotesIcon
+                className={`w-10 text-blue-800 cursor-pointer mt-3 bg-white rounded-md border-blue-950 shadow-lg p-1 items-center duration-300 ${
                   !open ? "w-10" : "w-12"
                 }`}
               />

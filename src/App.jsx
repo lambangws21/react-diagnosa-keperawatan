@@ -30,7 +30,7 @@ function App() {
   return (
     <div>
       <SideBar />
-      <div className="container mx-auto p-10 bg-slate-50 ml-20">
+      <div className="container mx-auto p-10 bg-slate-50 ml-40">
         <table className="w-full border-collapse  ">
           <thead>
             <tr>
