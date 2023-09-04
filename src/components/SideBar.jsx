@@ -3,10 +3,10 @@ import { useState } from "react";
 function SideBar() {
   const [open, setOpen] = useState(true);
   const Menus = [
-    { title: "Nursing Diagnosis", src: "Bookmark" },
-    { title: "Belanja Alkes Operasi", src: "shoppingIcon" },
-    { title: "Nursing", src: "Bookmark", gap: true },
-    { title: "Belanja", src: "shoppingIcon" },
+    { title: "Nursing Diagnosis", src: "sign" },
+    { title: "Alkes Operasi", src: "recipe-book" },
+    { title: "Jadwal Operasi", src: "calendar", gap: true },
+    { title: "Chat", src: "speech-bubble" },
   ];
   return (
     <div className="flex fixed z-50">
@@ -25,7 +25,7 @@ function SideBar() {
         <div className="flex gap-x-4 items-center">
           <img
             src="./src/img/logo.png"
-            className={` cursor-pointer duration-500 ${
+            className={` cursor-pointer duration-500 shadow-sky-400 border-sky-300 rounded-full ${
               open && "rotate-[360deg]"
             }`}
           />
