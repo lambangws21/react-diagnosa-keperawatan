@@ -44,7 +44,7 @@ function SideBar() {
       </div>
       <ul className="pt-6">
         {Menus.map((Menu, index) => (
-          <li key={index}  className={`flex border border-b-gray-50 rounded-md p-2 cursor-pointer hover:bg-blue-900 text-gray-300 text-sm items-center gap-x-5 duration-300 
+          <li key={index}  className={`flex border border-b-gray-50 rounded-md p-2 cursor-pointer hover:bg-blue-900 text-gray-300 text-sm items-center gap-x-5 duration-500 
                 ${Menu.gap ? "mt-96" : "mt-7"} ${
               index === 0 && "bg-blue-700"
             } `}           >
@@ -66,6 +66,15 @@ function SideBar() {
           </li>
         ))}
       </ul>
+      <div className="flex items-center justify-center mt-96">
+        <img
+          src="https://lh3.googleusercontent.com/pw/AIL4fc99jXZ13Zx8hhzMy-Rh-wyXtp2BsRHHIWljoK86JPt7p7LRnOrv-w2z2ApMhAnbLCcnF3dzkCGJDSrLphNF-yFW0lcSi-bErVoMC33vBB5fgTdV0kF5cCPCKeFR6Jpf9juVOIHtDQHEBLUeTRZIh5bJzxT7p6LzsAnZOmIbJ9VQZrUTHgvUtY1cg0B09q_3iYx7Lx-NsfMKZIBPF3KBxDCAsx7WMCAB7qLx-PQE8JmgoECMhZj6JhSuiMODyEK9G-l0SGtvPTk4521vPrv9JW1P2zdi6wmnb4n_J8EWkdZP48DWa4uFlXIpfy8Bq2GAygaw6MRVIacscJPVZ4as4YSzmyfOcyYwQjxYrngYcKens1uUaPqynYKXPUWFlR3CrSvTjHm4dxHor2SVVqiKNGWNzfIXlBFEhYu3jdsn5uzpPWWhy2O6uRhvhJ39aLFuoTX5zR98j0zZRJ1aZUJsV0uiYzciKJ-r4FlLka3Xa5Jij75DITru3ckkArW_9AkqtywqRc85FwttMLOqhBrnMuoK1jzcCTJfP0MMc8s2w1aR0tjS2eQdsFY2IT4qLLLb57sg6Rm5yIsHJR2ZqiDr7e0ckTZcy5UO-MJ0FgG79AxFYsJ_99Bwo96uhb5x9ovaM0MhaNQlueLAmzRqAW8RPUA3_VPNelI4QnaqJpSYmceb2Ij7l1xVP9xhTvxBThztNmb1YAX9QftfpJ__QWiY4pDTfONTxFygOdpvag8Y1yBZH7LYaPgQlYiScUw8a_2E250cPACxjQDtLNkxOa-6KB8i5WFbets-td9Orvah11XcsftS14dAqgVxOEt-pK0DMPMWCS20iYzV1xR-UHV4w2watDRLrOglXcVY9TBfPt8cWNbw8NSer5r0-TOzuZYO14iGOhMAbwlnqKjXWSgT=w926-h931-s-no?authuser=0"
+          alt="lambang"
+          className={` flex justify-end rounded-full border border-white cursor-pointer ${
+            open ? "w-16 h-16" : "w-10 h-10 "
+          }`}
+        />
+      </div>
     </div>
   );
 }
