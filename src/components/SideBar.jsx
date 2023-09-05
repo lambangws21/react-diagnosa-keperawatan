@@ -6,7 +6,6 @@ import {
   CubeTransparentIcon,
   LinkIcon,
   DocumentTextIcon,
-  CurrencyDollarIcon,
 } from "@heroicons/react/24/outline";
 function SideBar() {
   const [open, setOpen] = useState(true);
