@@ -1,5 +1,10 @@
 /** @format */
 import { useState } from "react";
+import {
+  ArrowLeftCircleIcon,
+  ClipboardDocumentCheckIcon,
+  CubeTransparentIcon,
+} from "@heroicons/react/24/outline";
 function SideBar() {
   const [open, setOpen] = useState(true);
   const Menus = [
@@ -19,16 +24,15 @@ function SideBar() {
         open ? "w-72" : "w-20 "
       } bg-dark-purple h-screen p-5 bg-blue-950 pt-8 duration-300 sticky top-0`}
     >
-      <img
-        src="./src/img/control.png"
-        className={`absolute cursor-pointer -right-3 top-9 w-7 border-dark-purple
-             border-2 rounded-full  ${!open && "rotate-180"}`}
+      <ArrowLeftCircleIcon
+        className={`absolute cursor-pointer bg-slate-200 -right-3 top-9 w-7 border-slate-200 border-2 rounded-full  ${
+          !open && "rotate-180"
+        }`}
         onClick={() => setOpen(!open)}
       />
       <div className="flex gap-x-4 items-center">
-        <img
-          src="./src/img/Logo.png"
-          className={`cursor-pointer duration-500 rounded-full ${
+        <CubeTransparentIcon
+          className={`cursor-pointer duration-500 rounded-full w-14 border bg-white inset-0 ${
             open && "rotate-[360deg]"
           }`}
         />
@@ -49,7 +53,7 @@ function SideBar() {
               index === 0 && "bg-light-white"
             } `}
           >
-            <img src={`./src/img/${Menu.src}.png`} />
+            <ClipboardDocumentCheckIcon className="h-5 w-5" />
             <span className={`${!open && "hidden"} origin-left duration-200`}>
               {Menu.title}
             </span>
