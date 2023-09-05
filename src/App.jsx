@@ -17,7 +17,6 @@ import RisJatuhIntervensi from "./Tabel/RisJatuhIntervensi";
 import RisikoInfeksi from "./Tabel/RisikoInfeksi";
 import RisikoInfeksiLuaran from "./Tabel/RisikoInfeksiLuraran";
 import RisikoInfekIntervensi from "./Tabel/RisikoInfekIntervensi";
-import Footer from "./components/Footer";
 import GangguanIntegritasJaringan from "./Tabel/GangguanIntegritasJaringan";
 import GangguanIntegritasLuaran from "./Tabel/GangguanIntegritasLuaran";
 import GangguanIntegritasIntervensi from "./Tabel/GangguanIntegritasIntervensi";
@@ -28,9 +27,9 @@ import SideBar from "./components/SideBar";
 
 function App() {
   return (
-    <div>
+    <div className="bg-slate-50 mx-auto flex">
       <SideBar />
-      <div className="container mx-auto p-10 bg-slate-50 ml-40">
+      <div className="w-screen mx-auto p-10 bg-slate-50 flex flex-col">
         <table className="w-full border-collapse  ">
           <thead>
             <tr>
@@ -163,9 +162,6 @@ function App() {
           </tbody>
         </table>
       </div>
-      <footer>
-        <Footer />
-      </footer>
     </div>
   );
 }
