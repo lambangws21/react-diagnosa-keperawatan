@@ -1,26 +1,29 @@
 /** @format */
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   ArrowLeftCircleIcon,
   ClipboardDocumentCheckIcon,
   CubeTransparentIcon,
   LinkIcon,
   DocumentTextIcon,
+  QrCodeIcon,
 } from "@heroicons/react/24/outline";
 function SideBar() {
   const [open, setOpen] = useState(true);
+  const navigate = useNavigate();
   const Menus = [
-    { title: "My Diagosis", src: "duplicate", gap: true },
+    { title: "My Diagosis", src: "duplicate", path: "/", gap: true },
+    { title: "Generete Text", src: "barcode", path: "/textgenerate" },
     { title: "Belanja Alkes", src: "link" },
     { title: "Operasi Prosedur ", src: "document" },
-    // { title: "Setting", src: "Setting", gap: true },
   ];
 
   return (
     <div
       className={` ${
         open ? "w-72" : "w-20 "
-      } bg-dark-purple h-screen p-5 bg-blue-950 pt-8 duration-300 sticky top-0`}
+      } bg-dark-purple h-screen p-5 bg-blue-950 pt-8 duration-300 sticky top-0 z-50`}
     >
       <ArrowLeftCircleIcon
         className={`absolute cursor-pointer bg-slate-200 -right-3 top-9 w-7 border-slate-200 border-2 rounded-full  ${
@@ -34,6 +37,7 @@ function SideBar() {
           className={`cursor-pointer duration-500 rounded-full w-14 border bg-white inset-0 ${
             open && "rotate-[360deg]"
           }`}
+          onClick={() => navigate("/")}
         />
         <h1
           className={`text-white origin-left font-medium text-xl duration-200 ${
@@ -59,7 +63,7 @@ function SideBar() {
           Welcome!
         </h1>
         <p
-          className={`text-white origin-left font-medium text-xl duration-200 ${
+          className={`text-white origin-left font-medium text-md duration-200 ${
             !open && "scale-0"
           }`}
         >
@@ -71,17 +75,24 @@ function SideBar() {
           <li
             key={index}
             className={`flex border border-b-gray-50 rounded-md p-2 cursor-pointer hover:bg-blue-900 text-gray-300 text-sm items-center gap-x-5 duration-500 
-                ${Menu.gap ? "mt-56" : "mt-7"} ${
-              index === 0 && "bg-blue-700"
-            } `}
+                ${Menu.gap ? "mt-6" : "mt-7"} ${index === 0 && "bg-blue-700"} `}
           >
             {Menu.src === "duplicate" && (
-              <ClipboardDocumentCheckIcon className="h-5 w-5" />
+              <ClipboardDocumentCheckIcon
+                className="h-7 w-7"
+                onClick={() => navigate("/")}
+              />
             )}
-            {Menu.src === "list" && <CubeTransparentIcon className="h-5 w-5" />}
-            {Menu.src === "link" && <LinkIcon className="h-5 w-5" />}
+            {Menu.src === "barcode" && (
+              <QrCodeIcon
+                className="h-7 w-7"
+                onClick={() => navigate("/textgenerate")}
+              />
+            )}
+            {Menu.src === "list" && <CubeTransparentIcon className="h-7 w-7" />}
+            {Menu.src === "link" && <LinkIcon className="h-7 w-7" />}
             {Menu.src === "document" && (
-              <DocumentTextIcon className="h-5 w-5" />
+              <DocumentTextIcon className="h-7 w-7" />
             )}
             <span className={`${!open && "hidden"} origin-left  duration-200`}>
               {Menu.title}
