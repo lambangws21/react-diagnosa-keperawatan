@@ -20,7 +20,7 @@ function TextGenerate() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const completedSentence = `Pasien dengan tindakan operasi ${formData.operasi} dengan operator ${formData.operator} Keadaan umum pasien ${formData.keadaan} kesadaran pasien ${formData.kesadaran}, pasien ada riwayat ${formData.riwayat} pengobatan rutin ${formData.pengobatan}, pemeriksaan penunjang preoperasi ${formData.penunjang} persediaan darah ${formData.persediaan}, perawatan selanjutnya post operasi ${formData.postoperasi}.`;
+    const completedSentence = `Pasien dengan tindakan operasi ${formData.operasi} dengan operator ${formData.operator} Keadaan umum pasien ${formData.keadaan} kesadaran pasien ${formData.kesadaran}, pasien ada riwayat  ${formData.riwayat} pengobatan rutin ${formData.pengobatan}, pemeriksaan penunjang preoperasi ${formData.penunjang} persediaan darah ${formData.persediaan}, perawatan selanjutnya post operasi ${formData.postoperasi}.`;
     setModalIsOpen(true);
     setCompletedSentence(completedSentence);
   };

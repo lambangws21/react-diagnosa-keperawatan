@@ -15,8 +15,8 @@ function SideBar() {
   const Menus = [
     { title: "My Diagosis", src: "duplicate", path: "/", gap: true },
     { title: "Generete Text", src: "barcode", path: "/textgenerate" },
-    { title: "Belanja Alkes", src: "link" },
-    { title: "Operasi Prosedur ", src: "document" },
+    { title: "Belanja Alkes", src: "link", path: "/belanjaalkes" },
+    { title: "Operasi Prosedur ", src: "document", path: "/operasiprosedur" },
   ];
 
   return (
@@ -33,7 +33,7 @@ function SideBar() {
       />
       <div className="flex gap-x-4 items-center">
         <img
-          src="./src/assets/logo.png"
+          src="./src/img/logo.webp"
           className={`cursor-pointer duration-500 rounded-full w-14 border bg-white inset-0 ${
             open && "rotate-[360deg]"
           }`}
@@ -49,7 +49,7 @@ function SideBar() {
       </div>
       <div className="flex flex-col items-center justify-center mt-6">
         <img
-          src="./src/assets/profil.jpg"
+          src="./src/img/profil.webp"
           alt="lambang"
           className={` flex justify-end rounded-full border border-white cursor-pointer ${
             open ? "w-16 h-16" : "w-10 h-10 "
@@ -70,31 +70,27 @@ function SideBar() {
           Selamat Beraktivitas
         </p>
       </div>
-      <ul className="pt-6">
+      <ul className="pt-5">
         {Menus.map((Menu, index) => (
           <li
             key={index}
             className={`flex border border-b-gray-50 rounded-md p-2 cursor-pointer hover:bg-blue-900 text-gray-300 text-sm items-center gap-x-5 duration-500 
-                ${Menu.gap ? "mt-6" : "mt-7"} ${index === 0 && "bg-blue-700"} `}
+                ${Menu.gap ? "mt-4" : "mt-5"} `}
+            onClick={() => navigate(Menu.path)}
           >
             {Menu.src === "duplicate" && (
-              <ClipboardDocumentCheckIcon
-                className="h-7 w-7"
-                onClick={() => navigate("/")}
-              />
+              <ClipboardDocumentCheckIcon className="h-7 w-7" />
             )}
-            {Menu.src === "barcode" && (
-              <QrCodeIcon
-                className="h-7 w-7"
-                onClick={() => navigate("/textgenerate")}
-              />
-            )}
+            {Menu.src === "barcode" && <QrCodeIcon className="h-7 w-7" />}
             {Menu.src === "list" && <CubeTransparentIcon className="h-7 w-7" />}
             {Menu.src === "link" && <LinkIcon className="h-7 w-7" />}
             {Menu.src === "document" && (
               <DocumentTextIcon className="h-7 w-7" />
             )}
-            <span className={`${!open && "hidden"} origin-left  duration-200`}>
+            <span
+              className={`${!open && "hidden"} origin-left  duration-200`}
+              onClick={() => navigate(Menu.path)}
+            >
               {Menu.title}
             </span>
           </li>
