@@ -34,7 +34,7 @@ function SideBar() {
       <div className="flex gap-x-4 items-center">
         <img
           src="./src/img/logo.webp"
-          className={`cursor-pointer duration-500 rounded-full w-14 border bg-white inset-0 ${
+          className={`cursor-pointer duration-500 rounded-full w-14 h-14 animate-pulse border bg-white inset-0 ${
             open && "rotate-[360deg]"
           }`}
           onClick={() => navigate("/")}
@@ -51,7 +51,7 @@ function SideBar() {
         <img
           src="./src/img/profil.webp"
           alt="lambang"
-          className={` flex justify-end rounded-full border border-white cursor-pointer ${
+          className={` flex justify-end rounded-full border bg-yellow-100 animate-pulse border-white cursor-pointer ${
             open ? "w-16 h-16" : "w-10 h-10 "
           }`}
         />
