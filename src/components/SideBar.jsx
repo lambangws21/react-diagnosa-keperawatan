@@ -33,10 +33,10 @@ function SideBar() {
       />
       <div className="flex gap-x-4 items-center">
         <img
-          src="./src/img/logo.webp"
-          className={`cursor-pointer duration-500 rounded-full w-14 h-14 animate-pulse border bg-white inset-0 ${
-            open && "rotate-[360deg]"
-          }`}
+          src="https://raw.githubusercontent.com/lambangws21/react-diagnosa-keperawatan/1c0d9e494af6c4bb735ba7f0553a0bded0b1fc31/src/img/logo.webp"
+          className={`cursor-pointer duration-500 rounded-full ${
+            open ? "w-16 h-16" : "w-10 h-10 "
+          } animate-pulse border bg-white inset-0 ${open && "rotate-[360deg]"}`}
           onClick={() => navigate("/")}
         />
         <h1
@@ -49,7 +49,7 @@ function SideBar() {
       </div>
       <div className="flex flex-col items-center justify-center mt-6">
         <img
-          src="./src/img/profil.webp"
+          src="https://raw.githubusercontent.com/lambangws21/react-diagnosa-keperawatan/main/src/img/profil.webp"
           alt="lambang"
           className={` flex justify-end rounded-full border bg-yellow-100 animate-pulse border-white cursor-pointer ${
             open ? "w-16 h-16" : "w-10 h-10 "
