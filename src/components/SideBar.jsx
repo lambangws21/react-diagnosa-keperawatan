@@ -15,7 +15,7 @@ function SideBar() {
   const Menus = [
     { title: "My Diagosis", src: "duplicate", path: "/", gap: true },
     { title: "Generete Text", src: "barcode", path: "/textgenerate" },
-    { title: "Belanja Alkes", src: "link", path: "/belanjaalkes" },
+    { title: "Persiapan Operasi", src: "link", path: "/googleview" },
     { title: "Operasi Prosedur ", src: "document", path: "/operasiprosedur" },
   ];
 
@@ -51,7 +51,7 @@ function SideBar() {
         <img
           src="https://raw.githubusercontent.com/lambangws21/react-diagnosa-keperawatan/main/src/img/profil.webp"
           alt="lambang"
-          className={` flex justify-end rounded-full border bg-yellow-100 animate-pulse border-white cursor-pointer ${
+          className={` flex justify-end rounded-full border bg-yellow-100 border-white cursor-pointer ${
             open ? "w-16 h-16" : "w-10 h-10 "
           }`}
         />
