@@ -15,7 +15,7 @@ function SideBar() {
   const Menus = [
     { title: "My Diagosis", src: "duplicate", path: "/", gap: true },
     { title: "Generete Text", src: "barcode", path: "/textgenerate" },
-    { title: "Persiapan Operasi", src: "link", path: "/googleview" },
+    { title: "Persiapan Operasi", src: "link", path: "/Googlelist" },
     { title: "Operasi Prosedur ", src: "document", path: "/operasiprosedur" },
   ];
 

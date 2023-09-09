@@ -5,7 +5,7 @@ import SideBar from "./components/SideBar";
 import TabelDignosa from "./Pages/TabelDiagnosa";
 import TextGenerate from "./components/TextGenerate";
 import PersiapanOperasi from "./Pages/PersiapanOperasi";
-import GoogleView from "./components/GoogleView";
+import GoogleList from "./components/GoogleList";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Route path="/" element={<TabelDignosa />} />
           <Route path="/textgenerate" element={<TextGenerate />} />
           <Route path="/persiapanoperasi" element={<PersiapanOperasi />} />
-          <Route path="./googleview" element={<GoogleView />} />
+          <Route path="/GoogleList" element={<GoogleList />} />
         </Routes>
       </div>
     </Router>
