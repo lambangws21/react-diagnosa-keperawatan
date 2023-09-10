@@ -37,7 +37,7 @@ function GoogleView({ url }) {
             <div className="w-[100%] h-[70vh] md:h-[100vh] ">
               <button
                 onClick={closeModal}
-                className={`bg-blue-500 text-white px-2 py-2 h-14 w-14 mt-2 rounded-full font-extrabold text-4xl shadow-lg hover:bg-blue-600 absolute top-11 right-40 border-slate-50 border-2  `}
+                className={`bg-blue-500 text-white px-2 py-1 h-14 w-14 mt-6 rounded-full font-extrabold text-4xl shadow-lg hover:bg-blue-600 absolute top-11 right-40 border-slate-50 border-2  `}
               >
                 X
               </button>
