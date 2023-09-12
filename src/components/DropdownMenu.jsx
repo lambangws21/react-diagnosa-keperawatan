@@ -27,7 +27,7 @@ const DropdownMenu = ({
       <div
         className={`relative ${
           menuOpen ? "active" : ""
-        } bg-blue-900  text-gray-200 border overflow-hidden border-2 border-yellow-300 rounded-lg py-2 px-4 cursor-pointer transition duration-500 ease-in-out transform ${
+        } bg-blue-900  text-gray-200 overflow-hidden border-2 border-yellow-300 rounded-lg py-2 px-4 cursor-pointer transition duration-500 ease-in-out transform ${
           menuOpen ? "" : ""
         }`}
         onClick={toggleMenu}

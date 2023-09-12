@@ -91,11 +91,11 @@ const DocumentList = () => {
         defaultOption="Jenis Operasi"
         selectedName={selectedOptionName}
       />
-      <ul>
+      <ul className="ml-5 mt-2 ">
         {selectedDocument.map((doc, index) => (
-          <li key={index}>
+          <li key={index} className="mb-2">
             {doc.url.startsWith("https://docs.google.com/document/") ? (
-              <GoogleView url={doc.url} />
+              <GoogleView url={doc.url} documentTitle={doc.name} />
             ) : (
               <a href={doc.url} target="_blank" rel="noopener noreferrer">
                 {doc.name}

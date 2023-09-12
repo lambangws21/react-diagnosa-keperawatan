@@ -3,27 +3,29 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 
-function GoogleView({ url }) {
-  // State untuk mengontrol apakah modal ditampilkan atau tidak
+function GoogleView({ url, documentTitle }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // Fungsi untuk membuka modal
+
   const openModal = () => {
     setIsModalOpen(true);
   };
-  // Fungsi untuk menutup modal
+
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
   GoogleView.propTypes = {
     url: PropTypes.string.isRequired,
+    documentTitle: PropTypes.string.isRequired, // Tambahkan prop documentTitle
   };
+
   return (
-    <div className="ml-4 flex flex-col items-center  mb-2 justify-center">
+    <div className="ml-4 flex items-center  mb-2 justify-center">
       <button
         onClick={openModal}
-        className={`text-white font-bold text-xl bg-blue-700 px-4 py-2 rounded-md shadow-lg hover:bg-blue-800 duration-200 `}
+        className={` text-white font-bold text-xl bg-blue-700 px-4 py-2 rounded-md shadow-lg hover:bg-blue-800 duration-200 `}
       >
-        Buka Dokumen
+        Buka : {documentTitle}
       </button>
 
       {/* Modal */}
@@ -32,7 +34,7 @@ function GoogleView({ url }) {
           <div className="absolute inset-0 bg-black opacity-80"></div>
           <div className="p-1 rounded-lg z-10  w-auto h-[70vh] md:p-3 md:w-4/6 md:h-4/5">
             <h2 className="text-2xl font-bold mb-1 text-slate-50">
-              Persiapan Operasi
+              {documentTitle}
             </h2>
             <div className="w-[100%] h-[70vh] md:h-[100vh] ">
               <button
@@ -62,7 +64,6 @@ function GoogleView({ url }) {
   );
 }
 
-// Fungsi untuk mendapatkan ID dokumen dari URL Google Drive
 function getDocId(url) {
   const match = url.match(/\/d\/([A-Za-z0-9-_]+)/);
   if (match) {
